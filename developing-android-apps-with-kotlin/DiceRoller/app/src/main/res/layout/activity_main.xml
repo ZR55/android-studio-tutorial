@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+<!--    Change TextView to ImageView since dice images will be used.-->
+<!--    <TextView-->
+<!--        android:id="@+id/result_text"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:text="1"-->
+<!--        android:textSize="30sp" />-->
+
+
+    <!--        The last second line makes the real app empty when first time loaded.-->
+    <!--        But nothing will show in the Design view either. As a developer, -->
+    <!--        probably want to see the dice in the design view.-->
+    <!--    The "tools" namespace is used when you want to add dummy data for the preview-->
+    <!--    It will be removed when you actually compile the app-->
+    <ImageView
+        android:id="@+id/dice_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:srcCompat="@drawable/empty_dice"
+        tools:src="@drawable/dice_1"/>
+
+    <Button
+        android:id="@+id/roll_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/roll" />
+
+</LinearLayout>

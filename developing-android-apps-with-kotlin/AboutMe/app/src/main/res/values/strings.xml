@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">About Me</string>
+    <string name="name">Rui Zhang</string>
+    <string name="yellow_star">Yellow Star</string>
+
+    <string name="bio"> Hi there, my name is Rui.
+    \n\n I am dedicated to become a Googler in the neat future.
+        \n\n I\'m learning for the necessary knowledge to build my first Android App.
+        \n\n I got my first Bachelor\'s degree in Accounting where I developed my critical thinking
+        skills and data sensitivity. During my Master\'s degree in Management Information Systems,
+        I gradually converted my career path from business to technology. And now I\'ve decided to
+        pursue a second Bachelor\'s degree in Computer Science to further improve my technical
+        skills while preparing to become a Googler.
+    </string>
+    <string name="nick_name_hint">What\'s your nickname?</string>
+    <string name="done">Done!</string>
+</resources>
