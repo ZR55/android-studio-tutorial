@@ -17,7 +17,7 @@ Practice on building the first Android App with Android Studio
 
 ### Developing Android Apps with Kotlin" from Udacity
 
-##### Build your first App
+#### Build your first App
 
 * An Android project contains:
    * Kotlin files for the core logic of the app
@@ -25,7 +25,7 @@ Practice on building the first Android App with Android Studio
    * An Android Manifest file that defines essential app details so the OS can launch your app
    * Gradle scripts, for building and running your app
 
-##### Layouts
+#### Layouts
 
 * View and view groups
   * Views that make up a layout are organized as a hierachy of views
@@ -61,3 +61,18 @@ Practice on building the first Android App with Android Studio
   * Packed chain: elemetns are packed to use minimum space
   * Packed chain with bias: elements are packed to use minimum space and are moved on their axis depending on bias
   * Weighted chain: elements are resized to use all available space according to  specified weights with head and tail glued to parent.
+  
+  
+#### App Navigation
+
+* Navigation terms:
+  * **Action Bar**: appears at the top of the application screen. Contains application branding and navigation features such as the overflow menu and the application drawer button.
+  * **Up Button**: appears in the action bar and takes us back through previous screens the user has navigated to within the app.
+  * **Overflow Menu**: a drop down list of items within the Action Bar that can contain nagivation destinations.
+  * **Navigation Drawer**: a menu with a header that slides out from the side of the app.
+  * **Navigation Graph**: all of the destinations - the screens that can be navigated to from a single activity are contained in this.
+  
+* Fragement basics:
+  * In a Fragement, you don't inflate the view in onCreate like in an activity, but instead in "**onCreateView()**" method.
+  * Use "**context**" property from within a Fragement to get access to string and image resources.
+  * UI Fragements contain a layout and occupy a place within the "**Activity Layout**".
