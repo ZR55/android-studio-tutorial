@@ -17,19 +17,17 @@ Practice on building the first Android App with Android Studio
 
 ### Developing Android Apps with Kotlin" from Udacity
 
-##### Build your first App
+#### Build your first App
 
 * An Android project contains:
-
    * Kotlin files for the core logic of the app
    * A resources folder for static content such as images and strings
    * An Android Manifest file that defines essential app details so the OS can launch your app
    * Gradle scripts, for building and running your app
 
-##### Layouts
+#### Layouts
 
 * View and view groups
-
   * Views that make up a layout are organized as a hierachy of views
   * Views whose primary job is to contain other views are called view groups
     * A linear layout is a view group where you can have arrange views horizontally or vertiacally. When you define a linear layout, you'll set the layout to either horizontal or vertical
@@ -37,7 +35,6 @@ Practice on building the first Android App with Android Studio
     
     
 * Padding and Margin
-
   * Padding is the spacing inside of the Border of a view element while Margin is spacing outside of the Border.
   
 * ScrollView can ONLY have ONE child
@@ -47,8 +44,35 @@ Practice on building the first Android App with Android Studio
   A connection or alignment to another UI element, to the parent layout, or to an invisible guideline.
 
 * Advantages of Constraint Layout:
-
   * You can make it responsive to screens and resolutions
   * Usually flatter view hierarchy
   * Optimized for laying out its view
   * Free-form which infers to place views anywhere, and the editor helps add constraints
+  
+* Constraint types:
+  * Fixed constraint: a constraint that is specified using a hard-coded number;
+  * Adaptable constraint: a constraint that defines a relationship in relative and weighted terms;
+  * Absolute positioning: specify the coordinates of the view in the coordinates of its parent;
+  * Relative positioning: specify where the view goes in relation to the other views (including its parents).
+  
+* Chaining types:
+  * Spead chain: elements are spread equally in the space
+  * Spread chain inside: Elements are spread to use available space with head and tail attached to the parent 
+  * Packed chain: elemetns are packed to use minimum space
+  * Packed chain with bias: elements are packed to use minimum space and are moved on their axis depending on bias
+  * Weighted chain: elements are resized to use all available space according to  specified weights with head and tail glued to parent.
+  
+  
+#### App Navigation
+
+* Navigation terms:
+  * **Action Bar**: appears at the top of the application screen. Contains application branding and navigation features such as the overflow menu and the application drawer button.
+  * **Up Button**: appears in the action bar and takes us back through previous screens the user has navigated to within the app.
+  * **Overflow Menu**: a drop down list of items within the Action Bar that can contain nagivation destinations.
+  * **Navigation Drawer**: a menu with a header that slides out from the side of the app.
+  * **Navigation Graph**: all of the destinations - the screens that can be navigated to from a single activity are contained in this.
+  
+* Fragement basics:
+  * In a Fragement, you don't inflate the view in onCreate like in an activity, but instead in "**onCreateView()**" method.
+  * Use "**context**" property from within a Fragement to get access to string and image resources.
+  * UI Fragements contain a layout and occupy a place within the "**Activity Layout**".
