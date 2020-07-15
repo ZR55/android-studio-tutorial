@@ -76,3 +76,7 @@ Practice on building the first Android App with Android Studio
   * In a Fragement, you don't inflate the view in onCreate like in an activity, but instead in "**onCreateView()**" method.
   * Use "**context**" property from within a Fragement to get access to string and image resources.
   * UI Fragements contain a layout and occupy a place within the "**Activity Layout**".
+  
+* The principles of navigation:
+  * There's always a fixed starting place which is the screen that users see when they launch your app from the launcher.
+  * You can always go back: the navigation state of your app should be represented with a last in first out structure.
