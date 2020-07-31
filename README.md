@@ -111,3 +111,22 @@ Practice on building the first Android App with Android Studio
     * **Intent Category**: implicit intents have a category and datatype to further describe the operation. Categories aren't always used, but are used to further disambiguate the action.
     * **Intent Datatype**: such as text or JPEG image. It allows activites to support specific data types. 
   
+* About the "Share" functionality:
+  * Because an implicit intent is used, any app that supports using **ACTION_SEND** to send text can be used to share.
+  * Inside the `winner_menu.xml` file, `app:showAsAction = "ifRoom"` will cause the menu item to be displayed as an icon in the action bar if there's room.
+  * Android uses the [mime type](https://en.wikipedia.org/wiki/Media_type) of our parameter to locate the correct activities to share to. For example, if we want to share images using a mime type of image/JPEG.
+  * Intent extras are a key value data structure, similar to what we used in the bundle for fragment arguments.
+  
+* Navigation methods:
+  * **App Drawer navigation**: defaults to popping everything off the backstack except for the start destination.
+  * **Menu navigation**: adds to the backstack from the current position.
+  * **DrawerLayout**: provides the foundation for the sliding behavior of the navigation drawer.
+  * **NavigationView**: material design container that provides the look, feel, and functionality of the Navigation Drawer.
+  
+* **Navigation Listensers** are interfaces that contains a single method that gets called every time we navigate. They allow use to react and do something during navigation, or in our case, block the drawer from coming out after nagivating away from the start destination.
+
+* Transitions:
+  * **Enter Transition**: played for the destination to be navigated to when it's entered.
+  * **Exit Transition**: played for the destination to be navigated to when another destination replaces the current one.
+  * **Pop Enter Transition**: played for the destination is returned to view from the back stack.
+  * **Pop Exit Transition**: played when the current destination is popped off the back stack.
