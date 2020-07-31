@@ -12,6 +12,8 @@ Practice on building the first Android App with Android Studio
 
 [Online video courses](https://classroom.udacity.com/courses/ud9012/lessons/37a8fa57-7d18-4704-bfb7-da2864cb2e75/concepts/23c9e108-90dc-45d5-84b9-6d43cc49f570) (Udacity)
 
+[Android Basics in Kotlin](https://developer.android.com/courses/android-basics-kotlin/course) (NEW! But only updated to Unit 1)
+
 
 ## Notes for tutorials
 
@@ -80,3 +82,32 @@ Practice on building the first Android App with Android Studio
 * The principles of navigation:
   * There's always a fixed starting place which is the screen that users see when they launch your app from the launcher.
   * You can always go back: the navigation state of your app should be represented with a last in first out structure.
+  * Up goes back (mostly): the up button in the App and the back button in the system should react mostly the same.
+  
+* popUpTo inclusive VS popUpTo not-inclusive:
+  * popUpTo inclusive: pops off everything on the back stack, including the referenced fragment transaction.
+  * popUpTo not-inclusive: pops off everything on the back stack until it finds the referenced fragment transaction.
+  
+* Up VS Back button:
+  * The up button and the back button both navigate within the App
+  * The back button navigates out of the App and into other Apps
+  
+* The functions of menu attributes:
+  * **id**:  used by navigation to determine where to navigate
+  * **title**: string displayed in the menu
+  * **setHasOptionsMenu**: tells Android that the Fragment has a menu
+  * **onCreateOptionsMenu**: where you inflate your menu
+  * **onOptionsItemSelected**: called when a menu item is selected
+
+* Advantages of using safe arguments:
+  * Type safety, as navigation generates the action and the argument class from the navigation graph.
+  * Argument enforcement, as non-default arguments are required parameters in the action.
+  * (Safe arguments eliminate bugs, not overhead)
+  
+* **Intent**: it indicates the intention of your App. It's like a description of something that the App wants an activity to perform.
+  * **Explicit intents**: it launches an activity using the name of the target activity class (specific) and they are typically only used to launch other activities within your App. The navigation component does this for you when you navigate to other activities in the navigation graph.
+  * **Implicit intents**: it specifies WHAT you want to be done and system chooses activity. It provides an abstract description of the operation to be performed, and they are often used to launch activities that are exposed by other App
+    * **Intent action**: Each implicit intent must have an action (this action is completely different than the ones we have in the navigation graph). Actions are used in intents to describe the type of thing that the app wants to be done on its behalf. Common actions are defined in the intent class such as view, eidt, or dial.
+    * **Intent Category**: implicit intents have a category and datatype to further describe the operation. Categories aren't always used, but are used to further disambiguate the action.
+    * **Intent Datatype**: such as text or JPEG image. It allows activites to support specific data types. 
+  
