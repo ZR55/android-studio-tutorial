@@ -130,3 +130,24 @@ Practice on building the first Android App with Android Studio
   * **Exit Transition**: played for the destination to be navigated to when another destination replaces the current one.
   * **Pop Enter Transition**: played for the destination is returned to view from the back stack.
   * **Pop Exit Transition**: played when the current destination is popped off the back stack.
+  
+  
+#### Activity & Fragment Lifecycle
+
+* Activity Lifecycle states (the status of activity)
+  * Created
+  * Started
+  * Resumed
+  * Destoryed
+  * Initialized
+  
+* Activity lifecycle callback methods (you'll probably need to write some code when the activity status changes):
+  * onCreate
+  * onStart
+  * onResume
+  * onDestory
+  * onPause
+  * onStop
+  * onRestart
+  
+* **Application class**: a base class that contains global application state for your entire app.
